@@ -38,6 +38,12 @@ const SubmitionToastText = (submission: SubmissionResultType | null, isSolved: b
     return (
       <Text>
         {strings.incorrectTaskQuery} -{submission.points_penalty}
+        {submission.hint && (
+          <>
+            <br />
+            {submission.hint}
+          </>
+        )}
       </Text>
     );
   }
@@ -165,6 +171,7 @@ export const Task = () => {
         submitSolution={submitSolution}
         resultData={error ? error : queryRun.result ? queryRun.result : queryRun.queryError}
         getClue={getClue}
+        nextTask={data.task?.next}
       />
     </section>
   );

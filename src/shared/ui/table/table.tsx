@@ -15,9 +15,7 @@ export const Table = ({ data: { columns, data }, height, variant="light" }: Tabl
   return (
     <div
       className={styles.tableWrapper}
-      style={{
-        "--height": height,
-      } as React.CSSProperties}
+      style={height ? { "--height": height } as React.CSSProperties : undefined}
     >
       <table className={cn(styles.table, {
         [styles.dark]: variant === "dark",

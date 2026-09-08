@@ -15,8 +15,16 @@ export const taskDifficultyOptions = [
     value: 1,
   },
   {
-    label: "сложная",
+    label: "Сложно",
     value: 2,
+  },
+  {
+    label: "DDL: Развертывание",
+    value: 3,
+  },
+  {
+    label: "DCL: Доступы",
+    value: 4,
   },
 ];
 

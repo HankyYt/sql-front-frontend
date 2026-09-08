@@ -68,7 +68,7 @@ export const TaskCluesDrawer = ({
             <div className={styles.block}>
               {isUserHasExpectedResult && expectedResult
                 ? <>
-                    <Table data={expectedResult} height="15vw"/>
+                    <Table data={expectedResult} height="20vh"/>
                     <Text margin="0.5vw 0 0">Всего строк: {expectedResult.row_count}</Text>
                   </>
                 : <Button

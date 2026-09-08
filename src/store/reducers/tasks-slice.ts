@@ -185,6 +185,7 @@ export const tasksSlice = createSlice({
       .addCase(submitTaskSolution.fulfilled.type, (state, action: PayloadAction<TaskDataPayloadType & { submission: SubmissionResultType }>) => {
         state.queryRun.isLoading = false;
         state.queryRun.error = null;
+        state.queryRun.queryError = null;
 
         tasksAdapter.updateOne(state, {
           id: `${action.payload.missionId}.${action.payload.taskId}`,
@@ -193,6 +194,14 @@ export const tasksSlice = createSlice({
             isSolved: action.payload.submission.is_correct,
           }
         });
+        
+        if (action.payload.submission.columns && action.payload.submission.data) {
+          state.queryRun.result = {
+            columns: action.payload.submission.columns,
+            data: action.payload.submission.data,
+            row_count: action.payload.submission.data.length,
+          };
+        }
       })
       .addCase(submitTaskSolution.rejected.type, (state, action: PayloadAction<string | ErrorRunngingQuery>) => {
         state.queryRun.isLoading = false;

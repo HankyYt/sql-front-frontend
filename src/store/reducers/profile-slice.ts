@@ -5,8 +5,8 @@ import { AchievementsType } from "@/shared/types/achievements-types";
 import { ProfileInfoDtoType, ProfileTaskProgressDtoType, ProfileTaskTotalDtoType, TaskDataType } from "@/shared/types/profile-types";
 
 import { getProfileAchievements, getProfileInfo, getProfileTaskProgress } from "./actions/profile-action";
-import { submitTaskSolution } from "./actions/task-actions";
-import { SubmissionResultType, TaskDataPayloadType } from "@/shared/types/task-type";
+import { getTaskClueData, getTaskExpectedResultData, submitTaskSolution } from "./actions/task-actions";
+import { ClueDtoType, ExpectedResultType, SubmissionResultType, TaskDataPayloadType } from "@/shared/types/task-type";
 
 type UserDataType = {
   login: string;
@@ -93,11 +93,39 @@ export const profileSlice = createSlice({
 
       //submitTaskSolution
       .addCase(submitTaskSolution.fulfilled.type, (state, action: PayloadAction<TaskDataPayloadType & { submission: SubmissionResultType }>) => {
-        if (!state.user.data || !action.payload.submission.current_points) {
+        if (!state.user.data || action.payload.submission.current_points === undefined) {
           return;
-        };
+        }
 
         state.user.data.totalScore = action.payload.submission.current_points;
+        
+        // Update task progress if a new task was solved
+        if (action.payload.submission.points_earned > 0 && state.tasks.data) {
+          const missionId = action.payload.missionId;
+          if (missionId === "0") {
+            state.tasks.data.easySolved += 1;
+          } else if (missionId === "1") {
+            state.tasks.data.mediumSolved += 1;
+          } else if (missionId === "2") {
+            state.tasks.data.hardSolved += 1;
+          }
+        }
+      })
+      
+      //getTaskClueData
+      .addCase(getTaskClueData.fulfilled.type, (state, action: PayloadAction<TaskDataPayloadType & { clue: ClueDtoType }>) => {
+        if (!state.user.data || action.payload.clue.total_score === undefined) {
+          return;
+        }
+        state.user.data.totalScore = action.payload.clue.total_score;
+      })
+
+      //getTaskExpectedResultData
+      .addCase(getTaskExpectedResultData.fulfilled.type, (state, action: PayloadAction<TaskDataPayloadType & { expectedResult: ExpectedResultType }>) => {
+        if (!state.user.data || action.payload.expectedResult.total_score === undefined) {
+          return;
+        }
+        state.user.data.totalScore = action.payload.expectedResult.total_score;
       });
   }
 });

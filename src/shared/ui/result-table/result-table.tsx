@@ -31,7 +31,7 @@ export const ResultTable = ({
         <Table
           variant={type === "quest" ? "dark" : "light"}
           data={resultData}
-          height="23vw"
+          height="30vh"
         />
         <Text
           margin="0.5vw 0 0"

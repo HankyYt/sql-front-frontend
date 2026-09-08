@@ -29,6 +29,10 @@ type DefaultTaskBlock = {
   resultData: string | ResultQueryDataType | null;
   getClue: () => void;
   sceneId?: string | null;
+  nextTask?: {
+    taskId: number | null;
+    missionId: number | null;
+  } | null;
 };
 
 type TaskBlockType =
@@ -55,6 +59,7 @@ export const TaskBlock = ({
   submitSolution,
   resultData,
   getClue,
+  nextTask,
 }: TaskBlockType) => {
   const [isDatabaseInfoOpen, setIsDatabaseInfoOpen] = useState(false);
   const [isTaskCluesOpen, setIsTaskCluesOpen] = useState(false);
@@ -178,6 +183,15 @@ export const TaskBlock = ({
             >
               ко всем заданиям
             </Link>
+            {nextTask && nextTask.taskId && (
+              <Link
+                href={`/missions/${nextTask.missionId}/task/${nextTask.taskId}`}
+                variant="button"
+                margin="0 0 0 1vw"
+              >
+                следующая задача
+              </Link>
+            )}
           </div>
         }
       </div>

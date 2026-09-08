@@ -19,7 +19,7 @@ export const DescriptionContent = () => {
           variant="column"
           lineHeight="1.5vw"
           width="45%"
-          margin="-1.8vw 0 0"
+          margin="1vw 0 0"
           alignSelf="end"
         >
           <span>но и величайшее наследие мужества, стратегии и силы разума.</span>

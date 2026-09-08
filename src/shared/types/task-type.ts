@@ -73,4 +73,7 @@ export type SubmissionResultType = {
   points_penalty: number;
   current_points: number;
   awarded_achievements: AchievementSubmitType[];
+  columns?: string[];
+  data?: (number | string)[][];
+  hint?: string;
 };
