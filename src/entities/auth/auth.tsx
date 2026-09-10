@@ -44,8 +44,8 @@ export const Auth = () => {
     >
       <div className={styles.menu}>
         {authType === "login"
-          ? <Link href={makeAuth("register")} size="1vw">зарегистрироваться</Link>
-          : <Link href={makeAuth("login")} size="1vw">войти</Link>
+          ? <Link href={makeAuth("register")} size="1vw">Зарегистрироваться</Link>
+          : <Link href={makeAuth("login")} size="1vw">Войти</Link>
         }
       </div>
       <Title
