@@ -1,42 +1,23 @@
-## Structure
+# sql-front-frontend
 
-```
-.
-├── public                      (static assets)
-│   ├── fonts                   (custom fonts used in the project)
-│   |   ├── BuranUSSR.ttf       (header font)
-│   |   └── moscowsans.ttf      (basic font)
-│   └── images                  (used images)
-│
-├── src                         (application source files)
-│   ├── pages                   (next.js routes)
-│   ├── layouts                 (page layout components)
-│   ├── entities                (business entities and logic)
-│   ├── store                   (state manager)
-│   ├── shared                  (shared code and components)
-│   |   ├── config              (application configuration)            
-│   |   ├── hooks               (custom react hooks)
-│   |   ├── types               (shared types)             
-│   |   ├── ui                  (reusable ui components)
-│   |   └── strings.ts          (text constants)
-│   |
-|   └── styles
-│       ├── _variables.scss     (sass variables)
-│       ├── _reset.scss         (css reset and normalize)
-│       └── global.scss         (global project styles imported in _app.tsx)
-│
-├── .env                        (enviroment variables)
-└── README.md                   (project overview and documentation)
-```
+### О проекте
 
+API веб-приложения для решения задач по SQL на тематику Великой Отечественной Войны. Цель проекта – повышение патриотического воспитания у студентов IT-специальностей.
 
-## .env
+### Используемый стек
 
-```
-NEXT_PUBLIC_BACKEND_URL = "put your backend url here"
-```
+* FastAPI
+* SQLAlchemy
+* PostgreSQL
+* JWT, PyJWT
+* uvicorn
 
-## Authors
+### Автор
+* [Гуров Тимофей](https://github.com/HankyYt) - DE, FullStack
 
-* [Ekaterina Domashova](https://github.com/katteri) - frontend
-* [Valeria Taranova](https://github.com/tarvarrs/sql-front-backend) - backend
+### Авторы прототипа
+
+* [Валерия Таранова](https://github.com/tarvarrs) - backend
+* [Екатерина Домашова](https://github.com/katteri) - frontend
+
+[Ссылка](https://sql-front.mirea.ru/) на проект
