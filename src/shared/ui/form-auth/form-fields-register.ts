@@ -12,37 +12,26 @@ export const formFieldsRegister = [
   },
   {
     name: "group",
-    label: "группа",
+    label: "Группа",
     type: "text",
     rules: {
-      pattern: {
-        value: /^[ЁёА-я]{4}-\d{2}-\d{2}$/,
-        message: "некорректная группа",
-      },
+      required: "Введите группу",
     },
   },
   {
     name: "email",
-    label: "почта",
+    label: "Почта",
     type: "text",
     rules: {
-      required: "введите почту",
-      pattern: {
-        value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-        message: "некорректная почта",
-      },
+      required: "Введите почту",
     },
   },
   {
     name: "login",
-    label: "логин",
+    label: "Логин",
     type: "text",
     rules: {
-      required: "введите логин",
-      pattern: {
-        value: /^[a-z][a-z0-9_-]{1,28}[a-z0-9]$/,
-        message: "некорректный логин",
-      },
+      required: "Введите логин",
     },
   },
   {
