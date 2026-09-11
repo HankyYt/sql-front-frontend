@@ -6,11 +6,8 @@ API веб-приложения для решения задач по SQL на �
 
 ### Используемый стек
 
-* FastAPI
-* SQLAlchemy
-* PostgreSQL
-* JWT, PyJWT
-* uvicorn
+* TypeScript
+* React
 
 ### Автор
 * [Гуров Тимофей](https://github.com/HankyYt) - DE, FullStack
