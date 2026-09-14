@@ -28,7 +28,7 @@ export const Achievements = () => {
         margin="3vw 0 5vw"
         color="black"
       >
-        достижения
+        Достижения
       </Title>
       {data.map(({ category, achievements }) => (
         <div key={category} className={styles.categoryBlock}>

@@ -17,7 +17,7 @@ export const StartGuideSection = ({ id }: { id: string }) => {
           as="h3"
           padding="10vw 0 0 1vw"
         >
-          как начать?
+          Как начать?
         </Title>
         <Text
           size="1.5vw"
@@ -40,7 +40,7 @@ export const StartGuideSection = ({ id }: { id: string }) => {
           margin="3vw 0 0 30vw"
           lineHeight="2vw"
         >
-          <span className={styles.listElement}>Первая подсказка — от 10 до 50 баллов (в зависимости от сложности задачи)</span>
+          <span className={styles.listElement}>Первая подсказка — от 10 до 50 баллов (в зависимости от сложности задачи) </span>
           <span className={styles.listElement}>Просмотр ожидаемого результата — от 20 до 100 баллов</span>
         </Text>
       </div>
@@ -58,7 +58,7 @@ export const StartGuideSection = ({ id }: { id: string }) => {
           lineHeight="2vw"
           margin="3vw 0 0 2vw"
         >
-          <span className={styles.displayBlock}>За правильное решение задачи ты получаешь от 100 до 500 баллов, в зависимости от миссии</span>
+          <span className={styles.displayBlock}>За правильное решение задачи ты получаешь от 100 до 500 баллов, в зависимости от миссии </span>
           <span className={styles.displayBlock}>За неправильное решение — теряешь от 10 до 50 баллов</span>
         </Text>
         <div className={styles.codeBlock}>
