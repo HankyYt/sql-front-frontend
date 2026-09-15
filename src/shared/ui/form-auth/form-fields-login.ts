@@ -4,7 +4,7 @@ export const formFieldsLogin = [
     label: "логин",
     type: "text",
     rules: {
-      required: "введите логин",
+      required: "Введите логин",
       pattern: {
         value: /^[a-zA-Z][a-zA-Z0-9_-]{1,28}[a-zA-Z0-9]$/,
         message: "неверный логин",
@@ -13,13 +13,13 @@ export const formFieldsLogin = [
   },
   {
     name: "password",
-    label: "пароль",
+    label: "Пароль",
     type: "password",
     rules: {
-      required: "введите пароль",
+      required: "Введите пароль",
       pattern: {
         value: /^.{8,}$/,
-        message: "неверный пароль",
+        message: "Неверный пароль",
       },
     },
   },

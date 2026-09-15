@@ -138,10 +138,10 @@ export const Task = () => {
       
       <div className={styles.spaceBetween}>
         <Text>
-          миссия {data.missionId}.{data.taskId}
+          Миссия {data.missionId}.{data.taskId}
         </Text>
         <Text>
-          мои баллы: {data.totalScore}
+          Мои баллы: {data.totalScore}
         </Text>
       </div>
 

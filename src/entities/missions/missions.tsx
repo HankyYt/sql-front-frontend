@@ -108,7 +108,7 @@ export const Missions = () => {
         margin="3vw 0 5vw"
         color="black"
       >
-        задачи
+        Задачи
       </Title>
       <div className={styles.selectBlock}>
         {selectConfig.map(({ title, name, options}, index) => (
@@ -130,7 +130,7 @@ export const Missions = () => {
                 color="black"
                 size="2vw"
               >
-                миссия <span style={{ fontSize: "1.73vw" }}>{missionId}</span>
+                Миссия <span style={{ fontSize: "1.73vw" }}>{missionId}</span>
               </Title>
               <div className={styles.tasksBlock}>
                 {tasks.map((task, index) => (
@@ -149,7 +149,7 @@ export const Missions = () => {
                 color="black"
                 size="2vw"
               >
-                нет задач
+                Нет задач
               </Title>}
         </div>
         <div className={styles.images} style={{ maxHeight: maxImagesHeight }}>

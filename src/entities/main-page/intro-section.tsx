@@ -17,7 +17,7 @@ export const IntroSection = ({ isAuth }: { isAuth: boolean }) => {
         size="15.8vw"
       >
         <span className={styles.title}>SQL Фронт</span>
-        <span className={styles.subTitle}>битва за данные</span>
+        <span className={styles.subTitle}>Битва за данные</span>
       </Title>
       <Title
         size="2.39vw"
@@ -26,7 +26,7 @@ export const IntroSection = ({ isAuth }: { isAuth: boolean }) => {
         letterSpacing="0.1vw"
         margin="-1.5vw 0 0 11.3vw"
       >
-        Освой SQL, вспоминая подвиги Победы
+        Освой SQL, отдавая дань памяти подвигам Победы
       </Title>
     </section>
   );

@@ -1,59 +1,59 @@
 export const formFieldsRegister = [
   {
     name: "fullname",
-    label: "фио",
+    label: "ФИО",
     type: "text",
     rules: {
       pattern: {
         value: /^[а-яёА-ЯЁ\s-]{1,90}$/,
-        message: "некорректное фио",
+        message: "Некорректное фио",
       },
     },
   },
   {
     name: "group",
-    label: "группа",
+    label: "Группа",
     type: "text",
     rules: {
       pattern: {
         value: /^[ЁёА-я]{4}-\d{2}-\d{2}$/,
-        message: "некорректная группа",
+        message: "Некорректная группа",
       },
     },
   },
   {
     name: "email",
-    label: "почта",
+    label: "Почта",
     type: "text",
     rules: {
-      required: "введите почту",
+      required: "Введите почту",
       pattern: {
         value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-        message: "некорректная почта",
+        message: "Некорректная почта",
       },
     },
   },
   {
     name: "login",
-    label: "логин",
+    label: "Логин",
     type: "text",
     rules: {
-      required: "введите логин",
+      required: "Введите логин",
       pattern: {
         value: /^[a-zA-Z][a-zA-Z0-9_-]{1,28}[a-zA-Z0-9]$/,
-        message: "некорректный логин",
+        message: "Некорректный логин",
       },
     },
   },
   {
     name: "password",
-    label: "пароль",
+    label: "Пароль",
     type: "password",
     rules: {
-      required: "введите пароль",
+      required: "Введите пароль",
       pattern: {
         value: /^.{8,}$/,
-        message: "введите пароль от 8 символов",
+        message: "Введите пароль от 8 символов",
       },
     },
   },

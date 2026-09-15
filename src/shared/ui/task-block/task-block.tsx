@@ -144,7 +144,7 @@ export const TaskBlock = ({
                 padding=".5vw 2vw"
                 onClick={toggleTaskClues} 
               >
-                {`подсказк${type === "task" ? "и" : "а"}`}
+                {`Подсказк${type === "task" ? "и" : "а"}`}
               </Button>
             : null}
         </div>
@@ -155,7 +155,7 @@ export const TaskBlock = ({
             as="p"
             size="3vw"
           >
-            результат
+            Результат
           </Title>
           <Button
             type="submit"
@@ -165,7 +165,7 @@ export const TaskBlock = ({
             onClick={submitSolution}
             disabled={!value}
           >
-            отправить
+            Отправить
           </Button>
         </div>
         {resultData ?
@@ -181,7 +181,7 @@ export const TaskBlock = ({
               href="/missions"
               variant="button"
             >
-              ко всем заданиям
+              Ко всем заданиям
             </Link>
             {nextTask && nextTask.taskId && (
               <Link
@@ -189,7 +189,7 @@ export const TaskBlock = ({
                 variant="button"
                 margin="0 0 0 1vw"
               >
-                следующая задача
+                Следующая задача
               </Link>
             )}
           </div>
