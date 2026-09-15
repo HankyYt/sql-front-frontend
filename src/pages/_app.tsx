@@ -8,6 +8,8 @@ import { store } from "@/store/store";
 import "@/styles/_reset.scss";
 import "@/styles/global.scss";
 
+import { BugReportButton } from "@/shared/ui/bug-report-button/bug-report-button";
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -20,6 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
           containerStyle={{ top: "4vw" }}
         />
         <Component {...pageProps} />
+        <BugReportButton />
       </Provider>
     </>
   );
