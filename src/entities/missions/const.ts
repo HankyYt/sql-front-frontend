@@ -7,23 +7,23 @@ export const taskDifficultyOptions = [
     value: "all",
   },
   {
-    label: "легкая",
+    label: "ДМЛ.00 Новобранец",
     value: 0,
   },
   {
-    label: "средная",
+    label: "ДМЛ.01 Специалист",
     value: 1,
   },
   {
-    label: "Сложно",
+    label: "ДМЛ.02 Мастер",
     value: 2,
   },
   {
-    label: "DDL: Развертывание",
+    label: "ДДЛ.03 Развертывание",
     value: 3,
   },
   {
-    label: "DCL: Доступы",
+    label: "ДДЛ.04 Доступы",
     value: 4,
   },
 ];

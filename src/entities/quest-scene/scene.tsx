@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/router";
 
@@ -54,9 +54,23 @@ export const Scene = () => {
     setIsMenuOpen((prev) => !prev);
   }, [setIsMenuOpen]);
 
+  useEffect(() => {
+    if (data?.questId !== undefined && data?.sceneId !== undefined) {
+      const saved = localStorage.getItem(`sql_draft_quest_${data.questId}_scene_${data.sceneId}`);
+      if (saved) {
+        setValue(saved);
+      } else {
+        setValue("");
+      }
+    }
+  }, [data?.questId, data?.sceneId]);
+
   const onChange = useCallback((val: string) => {
     setValue(val);
-  }, [setValue]);
+    if (data?.questId !== undefined && data?.sceneId !== undefined) {
+      localStorage.setItem(`sql_draft_quest_${data.questId}_scene_${data.sceneId}`, val);
+    }
+  }, [setValue, data?.questId, data?.sceneId]);
 
   const handleRunQuery = useCallback(() => {
     if (!data) {

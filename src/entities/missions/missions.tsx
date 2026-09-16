@@ -130,7 +130,9 @@ export const Missions = () => {
                 color="black"
                 size="2vw"
               >
-                Миссия <span style={{ fontSize: "1.73vw" }}>{missionId}</span>
+                <span style={{ fontSize: "1.73vw" }}>
+                  {taskDifficultyOptions.find((opt) => opt.value === missionId)?.label || `миссия ${missionId}`}
+                </span>
               </Title>
               <div className={styles.tasksBlock}>
                 {tasks.map((task, index) => (
