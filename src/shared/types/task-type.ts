@@ -43,6 +43,7 @@ export type TaskDataDtoType = {
     mission_id: number | null,
     task_id: number | null,
   },
+  difficulty?: string,
 };
 
 export type ClueDtoType = {

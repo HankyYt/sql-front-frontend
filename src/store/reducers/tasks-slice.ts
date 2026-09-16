@@ -25,6 +25,7 @@ type TaskType = {
   clue?: ClueDtoType,
   expectedResult?: ExpectedResultType,
   submission: SubmissionResultType | null;
+  difficulty?: string;
 };
 
 type TasksStateType = DefaultStateType &
@@ -84,6 +85,7 @@ export const tasksSlice = createSlice({
             missionId: action.payload.next.mission_id,
           },
           submission: null,
+          difficulty: action.payload.difficulty,
         };
 
         tasksAdapter.upsertOne(state, task);

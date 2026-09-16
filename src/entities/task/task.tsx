@@ -165,6 +165,17 @@ export const Task = () => {
         margin="6vw 0"
       >
         {data.task?.title}
+        <span style={{ fontSize: "2vw", marginLeft: "2vw", verticalAlign: "middle", opacity: 0.6 }}>
+          {
+            ({
+              0: "Новобранец",
+              1: "Специалист",
+              2: "Мастер",
+              3: "Специалист",
+              4: "Мастер",
+            } as Record<number, string>)[Number(data.missionId)] || ""
+          }
+        </span>
       </Title>
       <TaskBlock
         type="task"
