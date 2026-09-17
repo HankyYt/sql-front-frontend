@@ -19,14 +19,14 @@ export const NotFound = () => {
           padding="0 3.7vw 0 0"
           align="right"
         >
-          что-то пошло не так
+          Что-то пошло не так
         </Text>
       </div>
       
       <Link
         href="/"
       > 
-        на главную
+        На главную
       </Link>
     </section>
   );

@@ -40,7 +40,7 @@ export const TaskCluesDrawer = ({
         size="5vw"
         color="black"
       >
-        подсказка
+        Подсказка
       </Title>
       <div className={styles.block}>
         {isUserHasClue 
@@ -51,7 +51,7 @@ export const TaskCluesDrawer = ({
               padding="0.5vw"
               onClick={getClue}
             >
-              показать
+              Показать
             </Button>
         }
       </div>
@@ -63,7 +63,7 @@ export const TaskCluesDrawer = ({
               size="5vw"
               color="black"
             >
-              ожидаемый результат
+              Ожидаемый результат
             </Title>
             <div className={styles.block}>
               {isUserHasExpectedResult && expectedResult
@@ -77,7 +77,7 @@ export const TaskCluesDrawer = ({
                     padding="0.5vw"
                     onClick={getExpectedResult}
                   >
-                    показать
+                    Показать
                   </Button>
               }
             </div>

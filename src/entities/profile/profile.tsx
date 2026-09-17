@@ -60,15 +60,15 @@ export const Profile = () => {
 
   const buttonsConfig = useMemo(() => [
     {
-      text: "данные профиля",
+      text: "Данные профиля",
       onClick: toggleProfileInfo,
     },
     {
-      text: "прогресс по задачам",
+      text: "Прогресс по задачам",
       onClick: toggleTaskProgress,
     },
     {
-      text: "достижения",
+      text: "Достижения",
       onClick: toggleAchievements,
     },
   ], [toggleProfileInfo, toggleTaskProgress, toggleAchievements]);
@@ -116,7 +116,7 @@ export const Profile = () => {
         margin="1vw 0 10vw 0"
         letterSpacing="0.1vw"
       >
-        <span>баллы: </span>
+        <span>Баллы: </span>
         <span style={{fontSize: "2.6vw"}}>{profileData?.totalScore}</span>
       </Title>
       <div

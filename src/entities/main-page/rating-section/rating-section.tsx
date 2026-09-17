@@ -16,7 +16,7 @@ export const RatingSection = ({ id }: { id: string }) => {
         size="10vw"
         color="black"
       >
-        топ лучших игроков
+        Топ лучших игроков
       </Title>
       <RatingTable data={data}/>
       <div className={styles.image} />

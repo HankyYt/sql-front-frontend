@@ -17,7 +17,7 @@ export const StartGuideSection = ({ id }: { id: string }) => {
           as="h3"
           padding="10vw 0 0 1vw"
         >
-          как начать?
+          Как начать?
         </Title>
         <Text
           size="1.5vw"
@@ -25,14 +25,14 @@ export const StartGuideSection = ({ id }: { id: string }) => {
           width="51vw"
           margin="8vw 0 0 2vw"
         >
-          Тебе предстоит пройти три миссии, каждая из которых отличается уровнем сложности. Чем больше задач ты решишь, тем больше баллов и достижений получишь — а значит, поднимешься выше в рейтинге
+          Вам предстоит пройти три миссии, каждая из которых отличается уровнем сложности. Чем больше задач вы решите, тем больше баллов и достижений получите — а значит, подниметесь выше в рейтинге
         </Text>
         <Text
           size="2vw"
           color="white"
           margin="8vw 0 0 30vw"
         >
-          Во время решения ты можешь воспользоваться подсказками:
+          Во время решения вы можете воспользоваться подсказками:
         </Text>
         <Text
           size="1.5vw"
@@ -40,8 +40,8 @@ export const StartGuideSection = ({ id }: { id: string }) => {
           margin="3vw 0 0 30vw"
           lineHeight="2vw"
         >
-          <span className={styles.listElement}>Первая подсказка — от 10 до 50 баллов (в зависимости от сложности задачи)</span>
-          <span className={styles.listElement}>Просмотр ожидаемого результата — от 20 до 100 баллов</span>
+          <span className={styles.listElement}>Стоимость первой подсказки — от 10 до 50 баллов (в зависимости от сложности задачи) </span>
+          <span className={styles.listElement}>Штраф за просмотр ожидаемого результата — от 20 до 100 баллов</span>
         </Text>
       </div>
       <div className={styles.startGuideSection}>
@@ -50,7 +50,7 @@ export const StartGuideSection = ({ id }: { id: string }) => {
           color="white"
           padding="10vw 0 0 2vw"
         >
-          Будь внимателен!
+          Будьте внимательны!
         </Text>
         <Text
           size="1.5vw"
@@ -58,8 +58,8 @@ export const StartGuideSection = ({ id }: { id: string }) => {
           lineHeight="2vw"
           margin="3vw 0 0 2vw"
         >
-          <span className={styles.displayBlock}>За правильное решение задачи ты получаешь от 100 до 500 баллов, в зависимости от миссии</span>
-          <span className={styles.displayBlock}>За неправильное решение — теряешь от 10 до 50 баллов</span>
+          <span className={styles.displayBlock}>За правильное решение задачи вы получаете от 100 до 500 баллов, в зависимости от миссии </span>
+          <span className={styles.displayBlock}>За неправильное решение — теряете от 10 до 50 баллов</span>
         </Text>
         <div className={styles.codeBlock}>
           <CodeMirror
@@ -86,7 +86,7 @@ WHERE г.награда = 'Орден Победы'
             size="3.8vw"
             color="white"
           >
-            Присоединяйся к «Битве за данные». Учись. Борись. Побеждай.
+            Присоединяйтесь к «Битве за данные». <br></br>Учись. Боритесь. Побеждайте.
           </Title>
        </div>
       </div>
