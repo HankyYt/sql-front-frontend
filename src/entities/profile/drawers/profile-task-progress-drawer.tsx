@@ -46,6 +46,16 @@ export const TaskProgressDrawer = ({
               <ProgressBar solved={data.hardSolved} total={data.hardTasksTotal} />
               <Text>{data.hardSolved}/{data.hardTasksTotal}</Text>
             </div>
+            <div className={styles.row}>
+              <Text>миссия 3</Text>
+              <ProgressBar solved={data.mission3Solved} total={data.mission3TasksTotal} />
+              <Text>{data.mission3Solved}/{data.mission3TasksTotal}</Text>
+            </div>
+            <div className={styles.row}>
+              <Text>миссия 4</Text>
+              <ProgressBar solved={data.mission4Solved} total={data.mission4TasksTotal} />
+              <Text>{data.mission4Solved}/{data.mission4TasksTotal}</Text>
+            </div>
           </>
         )}
       </div>

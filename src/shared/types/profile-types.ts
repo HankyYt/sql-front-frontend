@@ -11,12 +11,16 @@ export type ProfileTaskProgressDtoType = {
   easy_solved: number;
   medium_solved: number;
   hard_solved: number;
+  mission3_solved: number;
+  mission4_solved: number;
 };
 
 export type ProfileTaskTotalDtoType = {
   easy_tasks_total: number;
   medium_tasks_total: number;
   hard_tasks_total: number;
+  mission3_tasks_total: number;
+  mission4_tasks_total: number;
 };
 
 export type TaskDataType = {
@@ -26,4 +30,8 @@ export type TaskDataType = {
   mediumTasksTotal: number;
   hardSolved: number;
   hardTasksTotal: number;
+  mission3Solved: number;
+  mission3TasksTotal: number;
+  mission4Solved: number;
+  mission4TasksTotal: number;
 };
