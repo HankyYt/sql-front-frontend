@@ -106,16 +106,16 @@ export const profileSlice = createSlice({
         
         // Update task progress if a new task was solved
         if (action.payload.submission.points_earned > 0 && state.tasks.data) {
-          const missionId = action.payload.missionId;
-          if (missionId === "0" || missionId === 0) {
+          const missionId = String(action.payload.missionId);
+          if (missionId === "0") {
             state.tasks.data.easySolved += 1;
-          } else if (missionId === "1" || missionId === 1) {
+          } else if (missionId === "1") {
             state.tasks.data.mediumSolved += 1;
-          } else if (missionId === "2" || missionId === 2) {
+          } else if (missionId === "2") {
             state.tasks.data.hardSolved += 1;
-          } else if (missionId === "3" || missionId === 3) {
+          } else if (missionId === "3") {
             state.tasks.data.mission3Solved += 1;
-          } else if (missionId === "4" || missionId === 4) {
+          } else if (missionId === "4") {
             state.tasks.data.mission4Solved += 1;
           }
         }
