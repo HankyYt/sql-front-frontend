@@ -61,6 +61,17 @@ export const Task = () => {
   useEffect(() => {
     dispatch(resetQueryRun());
   }, [dispatch, resetQueryRun, data.missionId, data.taskId]);
+
+  useEffect(() => {
+    if (data.missionId !== undefined && data.taskId !== undefined) {
+      const saved = localStorage.getItem(`sql_draft_mission_${data.missionId}_task_${data.taskId}`);
+      if (saved) {
+        setValue(saved);
+      } else {
+        setValue("");
+      }
+    }
+  }, [data.missionId, data.taskId]);
   
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
@@ -68,7 +79,10 @@ export const Task = () => {
 
   const onChange = useCallback((val: string) => {
     setValue(val);
-  }, [setValue]);
+    if (data.missionId !== undefined && data.taskId !== undefined) {
+      localStorage.setItem(`sql_draft_mission_${data.missionId}_task_${data.taskId}`, val);
+    }
+  }, [setValue, data.missionId, data.taskId]);
 
   const queryRunHandle = useCallback(() => {
     setError("");
@@ -151,6 +165,17 @@ export const Task = () => {
         margin="6vw 0"
       >
         {data.task?.title}
+        <span style={{ fontSize: "2vw", marginLeft: "2vw", verticalAlign: "middle", opacity: 0.6 }}>
+          {
+            ({
+              0: "Новобранец",
+              1: "Специалист",
+              2: "Мастер",
+              3: "Специалист",
+              4: "Мастер",
+            } as Record<number, string>)[Number(data.missionId)] || ""
+          }
+        </span>
       </Title>
       <TaskBlock
         type="task"

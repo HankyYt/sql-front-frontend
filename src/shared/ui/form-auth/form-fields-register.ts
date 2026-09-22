@@ -14,12 +14,7 @@ export const formFieldsRegister = [
     name: "group",
     label: "Группа",
     type: "text",
-    rules: {
-      pattern: {
-        value: /^[ЁёА-я]{4}-\d{2}-\d{2}$/,
-        message: "Некорректная группа",
-      },
-    },
+    rules: {},
   },
   {
     name: "email",

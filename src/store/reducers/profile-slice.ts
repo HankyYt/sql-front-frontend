@@ -70,11 +70,16 @@ export const profileSlice = createSlice({
           mediumTasksTotal: action.payload.medium_tasks_total,
           hardSolved: action.payload.hard_solved,
           hardTasksTotal: action.payload.hard_tasks_total,
+          mission3Solved: action.payload.mission3_solved,
+          mission3TasksTotal: action.payload.mission3_tasks_total,
+          mission4Solved: action.payload.mission4_solved,
+          mission4TasksTotal: action.payload.mission4_tasks_total,
         };
       })
       .addCase(getProfileTaskProgress.rejected.type, (state, action: PayloadAction<string>) => {
         state.tasks.isLoading = false;
         state.tasks.error = action.payload;
+        state.tasks.data = null;
       })
 
       // getProfileAchievements
@@ -101,13 +106,17 @@ export const profileSlice = createSlice({
         
         // Update task progress if a new task was solved
         if (action.payload.submission.points_earned > 0 && state.tasks.data) {
-          const missionId = action.payload.missionId;
+          const missionId = String(action.payload.missionId);
           if (missionId === "0") {
             state.tasks.data.easySolved += 1;
           } else if (missionId === "1") {
             state.tasks.data.mediumSolved += 1;
           } else if (missionId === "2") {
             state.tasks.data.hardSolved += 1;
+          } else if (missionId === "3") {
+            state.tasks.data.mission3Solved += 1;
+          } else if (missionId === "4") {
+            state.tasks.data.mission4Solved += 1;
           }
         }
       })
