@@ -8,8 +8,8 @@ export const IntroSection = ({ isAuth }: { isAuth: boolean }) => {
     <section className={styles.introSection}>
       {!isAuth &&
         <div className={styles.menuBlock}>
-          <Link href="/auth?type=login" size="1vw">войти</Link>
-          <Link href="/auth?type=register" size="1vw">зарегистрироваться</Link>
+          <Link href="/auth?type=login" size="1vw">Войти</Link>
+          <Link href="/auth?type=register" size="1vw">Зарегистрироваться</Link>
         </div>
       }
       
@@ -24,9 +24,9 @@ export const IntroSection = ({ isAuth }: { isAuth: boolean }) => {
         color="black"
         as="p"
         letterSpacing="0.1vw"
-        margin="-1.5vw 0 0 11.3vw"
+        margin="-1.5vw 0 0 11.5vw"
       >
-        Освой SQL, отдавая дань памяти подвигам Победы
+        Освойте SQL,<br></br> отдавая дань памяти подвигам Победы
       </Title>
     </section>
   );
