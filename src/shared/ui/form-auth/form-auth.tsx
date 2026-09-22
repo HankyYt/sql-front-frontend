@@ -24,7 +24,7 @@ const formConfig = {
     underlineFocusColor: colors.red,
     errorColor: "red" as keyof typeof colors,
     submitButton: {
-      text: "войти",
+      text: "Войти",
       width: "8vw",
       padding: "0.3vw",
       color: "black" as keyof typeof colors,
@@ -36,7 +36,7 @@ const formConfig = {
     underlineFocusColor: colors.grayMid,
     errorColor: "grayMid" as keyof typeof colors,
     submitButton: {
-      text: "зарегистрироваться",
+      text: "Зарегистрироваться",
       width: "16vw",
       padding: "0.4vw",
       color: "white" as keyof typeof colors,
