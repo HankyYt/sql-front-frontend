@@ -51,7 +51,7 @@ export const MainPageLayout = () => {
         isAuth={isAuth}
       />
       <MenuIcon
-        color={activeSection ? colorBySection[activeSection] : "white"}
+        color={activeSection ? colorBySection[activeSection] : "black"}
         onClick={toggleMenu}
       />
       <IntroSection isAuth={isAuth} />
