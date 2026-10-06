@@ -26,6 +26,10 @@ export const taskDifficultyOptions = [
     label: "ДДЛ.04 Доступы",
     value: 4,
   },
+  {
+    label: "ПЛП.05 Процедуры и триггеры",
+    value: 5,
+  },
 ];
 
 export const taskStatusOptions = [
