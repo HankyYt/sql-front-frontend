@@ -74,6 +74,8 @@ export const profileSlice = createSlice({
           mission3TasksTotal: action.payload.mission3_tasks_total,
           mission4Solved: action.payload.mission4_solved,
           mission4TasksTotal: action.payload.mission4_tasks_total,
+          mission5Solved: action.payload.mission5_solved,
+          mission5TasksTotal: action.payload.mission5_tasks_total,
         };
       })
       .addCase(getProfileTaskProgress.rejected.type, (state, action: PayloadAction<string>) => {
@@ -117,6 +119,8 @@ export const profileSlice = createSlice({
             state.tasks.data.mission3Solved += 1;
           } else if (missionId === "4") {
             state.tasks.data.mission4Solved += 1;
+          } else if (missionId === "5") {
+            state.tasks.data.mission5Solved += 1;
           }
         }
       })
