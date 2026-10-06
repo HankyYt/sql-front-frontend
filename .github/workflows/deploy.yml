@@ -11,12 +11,13 @@ jobs:
     runs-on: self-hosted
     
     steps:
-      - name: Checkout frontend
-        uses: actions/checkout@v4
-
-      - name: Rebuild and restart frontend container
+      - name: Rebuild Frontend
         run: |
-          if [ -d "../sql-backend" ]; then
-            cd ../sql-backend
-            docker compose up -d --build frontend || docker-compose up -d --build frontend
-          fi
+          echo "Updating frontend at /home/admin/sqlfront/sql-frontend..."
+          cd /home/admin/sqlfront/sql-frontend
+          git fetch origin
+          git reset --hard origin/main
+          
+          echo "Rebuilding frontend container..."
+          cd /home/admin/sqlfront/sql-backend
+          docker compose up -d --build frontend || docker-compose up -d --build frontend
